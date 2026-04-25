@@ -1,53 +1,119 @@
-# NutriFlow
+<p align="center">
+  <img src="./public/logo.svg" width="160" alt="NutriFlow Logo"/>
+</p>
 
-Sistema de gestão nutricional desenvolvido em Laravel 10 + Filament PHP.
+<h1 align="center">🥗 NutriFlow</h1>
 
-## Funcionalidades principais
+<p align="center">
+  Plataforma inteligente de gestão nutricional com foco em performance, automação e experiência do paciente.
+</p>
 
--   Gestão de pacientes
--   Plano alimentar individualizado
--   Controle de refeições
--   Registro de mensurações corporais
--   Gestão de treinos
--   Funções personalizadas do nutricionista
--   Multi-tenancy (Tenants)
--   Painéis separados (Nutricionista / Paciente)
--   API para comunicação externa
--   Suporte a MFA, ACL e autenticação nativa Laravel
--   Front-end em Blade (personalização futura)
+<p align="center">
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
+  <img src="https://img.shields.io/badge/laravel-10-red" />
+  <img src="https://img.shields.io/badge/filament-admin-blue" />
+  <img src="https://img.shields.io/badge/api-rest-green" />
+</p>
 
-## Tecnologias usadas
+---
 
--   PHP 8.2+
--   Laravel 10
--   Filament PHP
--   Livewire
--   MySQL
--   Composer
--   NPM / Vite
+## 🚀 Sobre o Projeto
 
-## Estrutura do Projeto
+O **NutriFlow** é uma plataforma completa para **gestão nutricional**, desenvolvida com foco em:
 
-O projeto segue arquitetura padrão Laravel, com:
+- 📈 Escalabilidade (multi-tenancy)
+- 🤖 Automação de processos
+- 📊 Organização de dados clínicos
+- 💡 Experiência moderna para nutricionistas e pacientes
 
--   `app/Models` – modelos principais (Paciente, Treino, Plano etc.)
--   `app/Filament/Resources` – telas administrativas do Filament
--   `routes/web.php` – rotas web
--   `routes/api.php` – rotas da API
--   `resources/views` – páginas Blade
--   `database/migrations` – tabelas e configurações do BD
--   `database/seeders` – dados iniciais
+A solução permite que profissionais da nutrição gerenciem seus atendimentos de forma **inteligente, centralizada e eficiente**.
 
-## Instalação
+---
 
-```bash
-git clone https://github.com/ferrerolan/NutriFlow.git
-cd NutriFlow
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate --seed
-npm install
-npm run dev
-php artisan serve
-```
+## 🎯 Objetivo
+
+Transformar o atendimento nutricional em um processo:
+
+- Mais **automatizado**
+- Mais **organizado**
+- Mais **orientado a dados**
+- Com maior **engajamento do paciente**
+
+---
+
+## 🎨 Design & Experiência
+
+O projeto segue uma linha visual moderna e clean, focada em:
+
+- Interface intuitiva (Filament Admin)
+- Separação clara entre perfis (Nutricionista / Paciente)
+- Estrutura preparada para evolução futura em UI/UX
+- Possibilidade de integração com chatbot e automações
+
+---
+
+## 🧠 Funcionalidades Principais
+
+### 👨‍⚕️ Nutricionista
+- Gestão completa de pacientes
+- Criação de planos alimentares personalizados
+- Controle de refeições e rotinas
+- Gestão de treinos
+- Registro de evolução corporal
+- Funções customizadas por profissional
+
+### 👤 Paciente
+- Acesso ao plano alimentar
+- Visualização de refeições
+- Acompanhamento de evolução
+- Interface dedicada
+
+### ⚙️ Sistema
+- Multi-tenancy (gestão de múltiplos profissionais)
+- Painéis separados (Admin / Paciente)
+- API REST para integrações externas
+- Autenticação robusta (MFA, ACL)
+- Base pronta para automações e IA
+
+
+## 🧩 Arquitetura
+
+## ⚙️ Tecnologias Utilizadas
+
+- **PHP 8.2+**
+- **Laravel 10**
+- **Filament PHP**
+- **Livewire**
+- **MySQL**
+- **Blade**
+- **Vite (NPM)**
+
+## 📁 Estrutura do Projeto
+
+🔄 Roadmap (Próximas Evoluções)
+ Dashboard com métricas avançadas
+ Integração com chatbot (WhatsApp / IA)
+ Sistema de notificações
+ App mobile (futuro)
+ Personalização completa do front-end
+ 
+💡 Diferenciais
+Arquitetura preparada para SaaS
+Multi-tenancy nativo
+Integração fácil com APIs externas
+Base ideal para IA conversacional
+Foco em produtividade do nutricionista
+
+👨‍💻 Autor
+Alan Ferreira
+Desenvolvedor | Chatbots | IA Conversacional
+
+Laravel | Filament | Node-RED | APIs
+Automação de processos
+Integração com WhatsApp e IA
+
+
+
+
+
+
