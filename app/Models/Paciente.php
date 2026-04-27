@@ -2,11 +2,23 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Paciente extends Model
 {
-    protected $fillable = ['tenant_id', 'nome', 'email', 'telefone', 'data_nascimento'];
+    use HasFactory;
+
+    protected $fillable = [
+        'tenant_id',
+        'nome',
+        'email',
+        'telefone',
+        'data_nascimento',
+        'objetivo',
+        'observacoes',
+        'status',
+    ];
 
     public function tenant()
     {

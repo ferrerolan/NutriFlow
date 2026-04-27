@@ -20,6 +20,7 @@ class CustomerResource extends Resource
     protected static ?string $pluralModelLabel = 'Pacientes';
     protected static ?string $modelLabel = 'Paciente';
     protected static ?string $navigationGroup = 'Área do Nutricionista';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Form $form): Form
     {

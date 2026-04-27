@@ -3,10 +3,21 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Refeicao extends Model
 {
-    protected $fillable = ['plano_alimentar_id', 'descricao', 'horario'];
+    use HasFactory;
+
+    protected $fillable = [
+        'plano_alimentar_id',
+        'titulo',
+        'tipo',
+        'horario',
+        'descricao',
+        'calorias',
+        'observacoes',
+    ];
 
     public function planoAlimentar()
     {

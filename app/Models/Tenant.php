@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tenant extends Model
 {
-    protected $fillable = ['nome', 'email', 'telefone'];
+    protected $fillable = [
+        'name',
+        'domain',
+        'plan_type',
+        'active_until',
+    ];
 
     public function users()
     {

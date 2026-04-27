@@ -10,12 +10,15 @@ class ListFuncaoNutricionistas extends ListRecords
 {
     protected static string $resource = FuncaoNutricionistaResource::class;
 
+    protected static ?string $title = 'Funções do Nutricionista';
+
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make(),
-            Actions\EditAction::make(),
-            Actions\DeleteAction::make(),
+            Actions\CreateAction::make()
+                ->label('Nova Função')
+                ->icon('heroicon-o-plus')
+                ->color('success'),
         ];
     }
 }

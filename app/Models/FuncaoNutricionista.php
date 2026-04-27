@@ -4,7 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FuncaoNutricionista extends Model  // ✅ correto, igual ao nome do arquivo
+class FuncaoNutricionista extends Model
 {
-    protected $fillable = ['FuncaoNutricionista', 'descricao'];
+    protected $fillable = [
+        'FuncaoNutricionista',
+        'nome',
+        'descricao',
+        'nivel_acesso',
+        'status',
+    ];
 }

@@ -13,37 +13,39 @@ class EditFuncaoNutricionista extends EditRecord
 
     protected static ?string $title = 'Editar Função';
 
-    /**
-     * Define as ações do cabeçalho (botões acima do formulário)
-     */
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['status'] = $data['status'] ?? 'ativo';
+        $data['nivel_acesso'] = $data['nivel_acesso'] ?? 'operacional';
+
+        return $data;
+    }
+
     protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make()
                 ->label('Excluir Função')
-                ->visible(fn($record) => $record !== null) // evita o erro de null
+                ->modalHeading('Excluir função')
+                ->modalDescription('Tem certeza que deseja excluir esta função? Essa ação não poderá ser desfeita.')
+                ->modalSubmitActionLabel('Sim, excluir')
                 ->successNotification(
                     Notification::make()
                         ->title('Função removida com sucesso 🗑️')
+                        ->body('A função foi removida da estrutura do NutriFlow.')
                         ->success()
                 ),
         ];
     }
 
-    /**
-     * Notificação de sucesso após salvar a edição
-     */
     protected function getSavedNotification(): ?Notification
     {
         return Notification::make()
             ->title('Função atualizada com sucesso! ✅')
-            ->body('As alterações foram salvas e já estão disponíveis na listagem.')
+            ->body('As alterações foram salvas e já estão disponíveis no sistema.')
             ->success();
     }
 
-    /**
-     * Redireciona para a listagem após editar ou excluir
-     */
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
